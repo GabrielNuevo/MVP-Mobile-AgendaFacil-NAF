@@ -1,3 +1,4 @@
+/* Estilo base para desktop */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -5,50 +6,69 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     background-color: #bcbcbc;
 }
 
-.container {
+.container,
+.feedback-container {
     background-color: #fff;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
 }
 
 form {
     display: flex;
     flex-direction: column;
-    width: 300px;
+    width: 100%;
     margin: auto;
+}
+
+form > * {
+    margin-bottom: 16px;
 }
 
 h1 {
     text-align: center;
+    font-size: 28px;
 }
 
 h2 {
     color: green;
+    font-size: 24px;
+    text-align: center;
 }
 
 label {
     margin-bottom: 8px;
     display: block;
+    font-weight: bold;
 }
 
-input {
-    padding: 8px;
-    margin-bottom: 16px;
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 14px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
 }
 
 button {
     background-color: #4caf50;
     color: white;
-    padding: 15px;
+    padding: 16px;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
-    font-size: large;
+    font-size: 18px;
+    width: 100%;
 }
 
 button:hover {
@@ -60,32 +80,19 @@ button:hover {
     cursor: not-allowed;
 }
 
+/* Campos de seleção ajustados */
 #dia,
 #horario {
-    height: 33px;
-    margin-bottom: 4%;
-    text-align: center;
-    font-weight: bold;
-}
-
-select {
     width: 100%;
-    padding: 8px;
-    margin-bottom: 16px;
-}
-
-textarea {
-    width: 94%;
-    padding: 8px;
-    margin-bottom: 16px;
-}
-
-
-.feedback-container {
+    height: 48px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 6px;
     background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .redirect-text {
@@ -102,4 +109,60 @@ textarea {
 
 .redirect-text a:hover {
     text-decoration: underline;
+}
+
+/* Estilo para os cards de agendamento */
+#listaAgendamentos div {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
+
+/* Responsividade para dispositivos móveis */
+@media (max-width: 600px) {
+    body {
+        flex-direction: column;
+        padding: 20px;
+        align-items: stretch;
+    }
+
+    .container,
+    .feedback-container {
+        padding: 16px;
+        width: 100%;
+    }
+
+    h1, h2 {
+        font-size: 22px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 16px;
+        padding: 14px;
+        margin-bottom: 12px;
+    }
+
+    #dia,
+    #horario {
+        font-size: 15px;
+        padding: 10px;
+        height: 48px;
+    }
+
+    .redirect-text {
+        font-size: 16px;
+    }
+
+    #listaAgendamentos div {
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    padding: 12px;
+    margin-bottom: 12px;
+    border-radius: 6px;
+}
 }
