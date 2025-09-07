@@ -120,6 +120,52 @@ button:hover {
     border-radius: 6px;
 }
 
+/* Responsividade para tablets ou dispositivos similares de tamanho intermediário */
+@media (min-width: 601px) and (max-width: 1024px) {
+    body {
+        flex-direction: column;
+        padding: 40px;
+        align-items: center;
+    }
+
+    .container,
+    .feedback-container {
+        padding: 24px;
+        max-width: 600px;
+    }
+
+    h1 {
+        font-size: 26px;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        font-size: 17px;
+        padding: 16px;
+    }
+
+    #dia,
+    #horario {
+        font-size: 16px;
+        height: 50px;
+    }
+
+    .redirect-text {
+        font-size: 15px;
+    }
+
+    #listaAgendamentos div {
+        padding: 14px;
+        margin-bottom: 14px;
+    }
+}
+
 /* Responsividade para dispositivos móveis */
 @media (max-width: 600px) {
     body {
