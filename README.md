@@ -61,24 +61,21 @@ O projeto está organizado da seguinte forma:
 
 Siga os passos abaixo para rodar o projeto localmente:
 
-1. **Clone ou faça o download do nosso repositório**:
+1. **Primeiro é necessário rodar o back-end. Clone ou faça o download do nosso repositório**:
    ```bash
-   git clone https://github.com/GabrielNuevo/MVP-Mobile-AgendaFacil-NAF
+   git clone https://github.com/felipetech4/MVP-BackEnd
    ```
-2. **Acesse a pasta do projeto**
-3. **Abrindo o site**:
-   - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
-
----
-
-## Integração com o Back-End
-
-Caso deseje utilizar as funcionalidades completas deste projeto, primeiro é necessário rodar o back-end. O repositório do back-end está disponível em:
-
-[**MVP-BackEnd**](https://github.com/felipetech4/MVP-BackEnd)
 
 ### Nota:
 
 As instruções para execução do back-end encontram-se no README do repositório correspondente.
+
+2. **Clone ou faça o download do nosso repositório mobile**:
+   ```bash
+   git clone https://github.com/GabrielNuevo/MVP-Mobile-AgendaFacil-NAF
+   ```
+3. **Acesse a pasta do projeto**
+4. **Abrindo o site**:
+   - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
 ---
