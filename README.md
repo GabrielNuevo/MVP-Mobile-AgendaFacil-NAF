@@ -61,10 +61,7 @@ O projeto está organizado da seguinte forma:
 
 Siga os passos abaixo para rodar o projeto localmente:
 
-1. **Primeiro é necessário rodar o back-end. Clone ou faça o download do nosso repositório**:
-   ```bash
-   git clone https://github.com/felipetech4/MVP-BackEnd
-   ```
+1. **Primeiro é necessário rodar o back-end**
 
 ### Nota:
 
