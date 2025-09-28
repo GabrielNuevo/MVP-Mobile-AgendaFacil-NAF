@@ -8,9 +8,20 @@
 
 ---
 
-## Descrição do Projeto
+## Situação-Problema
 
-Este é o repositório do front-end do projeto **MVP AgendaFácil NAF Mobile**. O sistema foi desenvolvido para facilitar o agendamento de serviços contábeis e fiscais, por meio de dispositivos mobile ou desktop, oferecendo as seguintes funcionalidades:
+O Núcleo de Apoio Contábil e Fiscal enfrenta dificuldades na organização e gestão dos atendimentos aos usuários. Atualmente, não há uma plataforma prática e funcional que permita realizar:
+
+- **Cadastro e autenticação de contas.**
+- **Agendamento de serviços de forma centralizada.**
+
+Este MVP busca solucionar esses desafios, proporcionando uma interface intuitiva e eficiente para os usuários finais.
+
+---
+
+## Descrição do MVP
+
+Este é o repositório do projeto **MVP AgendaFácil NAF Mobile**. O sistema foi desenvolvido para facilitar o agendamento de serviços contábeis e fiscais, por meio de dispositivos mobile ou desktop, oferecendo as seguintes funcionalidades:
 
 - Cadastro de usuários.
 - Login.
@@ -19,14 +30,19 @@ Este é o repositório do front-end do projeto **MVP AgendaFácil NAF Mobile**. 
 
 ---
 
-## Requisitos Funcionais e Não Funcionais
+## Requisitos Funcionais
 
-- **Agendamento de Atendimento:** Permitir que os usuários agendem serviços facilmente.
-- **Gestão de Disponibilidade:** Rastrear e gerenciar horários disponíveis.
-- **Feedback e Avaliação:** Possibilitar que os usuários forneçam feedback sobre os serviços prestados.
+- **Agendamento de Atendimento:** Possibilitar que os usuários agendem atendimentos rapidamente e de forma autônoma.
+- **Gestão de Disponibilidade:** Rastrear e gerenciar horários disponíveis automaticamente.
+- **Cadastro e Login:** Permitir ao usuário cadastrar uma nova conta e usá-la para fazer login no sistema.
+- **Feedback e Avaliação:** Receber feedback dos usuários sobre os serviços prestados.
+
+## Requisitos Não-Funcionais
+
+- **Desempenho:** As páginas devem ser de carregamento rápido.
+- **Responsividade:** O aplicativo deve ser responsivo e funcional em aparelhos com especificações diversas.
+- **Usabilidade:** Navegação simples, intuitiva, agradável e acessível.
 - **Segurança de Dados:** Garantir conformidade com regulamentações de privacidade.
-- **Desempenho Rápido:** As páginas devem ser responsivas e de carregamento rápido.
-- **Interface Intuitiva:** Navegação simples e funcional.
 
 ---
 
@@ -43,13 +59,13 @@ O projeto está organizado da seguinte forma:
 
 ## Instruções para Execução Local
 
-Siga os passos abaixo para rodar o front-end localmente:
+Siga os passos abaixo para rodar o projeto localmente:
 
 1. **Clone ou faça o download do nosso repositório**:
    ```bash
-   git clone https://github.com/felipetech4/MVP-FrontEnd
+   git clone https://github.com/GabrielNuevo/MVP-Mobile-AgendaFacil-NAF
    ```
-2. **Acesse a pasta do projeto (MVP-FrontEnd)**
+2. **Acesse a pasta do projeto**
 3. **Abrindo o site**:
    - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
@@ -64,11 +80,5 @@ Caso deseje utilizar as funcionalidades completas deste projeto, primeiro é nec
 ### Nota:
 
 As instruções para execução do back-end encontram-se no README do repositório correspondente.
-
----
-
-## Demonstração
-
-![AgendaFácilNAF](https://github.com/felipetech4/MVP/assets/97922422/5d53d360-9e2f-4a7a-91a0-8df6a1b5fb51)
 
 ---
