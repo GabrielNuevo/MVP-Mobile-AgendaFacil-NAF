@@ -1,0 +1,95 @@
+Histórias de Usuário – MVP AgendaFácil NAF Mobile
+
+1. Agendamento de Atendimento
+
+Como usuário,
+Quero agendar um serviço de forma simples e rápida,
+Para garantir meu atendimento no horário desejado.
+
+2. Gestão de Disponibilidade
+Como administrador,
+Quero registrar e gerenciar horários disponíveis na agenda,
+Para que os usuários possam escolher apenas horários livres.
+
+3. Feedback e Avaliação
+Como usuário,
+Quero avaliar e deixar meu feedback sobre o atendimento recebido,
+Para contribuir para a melhoria contínua do serviço.
+
+4. Segurança de Dados
+
+Como usuário,
+Quero que meus dados pessoais sejam armazenados e tratados com segurança, em conformidade com a LGPD,
+Para ter confiança ao utilizar a plataforma.
+
+5. Desempenho Rápido
+
+Como usuário,
+Quero que as páginas carreguem rapidamente e sejam responsivas,
+Para não perder tempo e conseguir acessar o sistema de qualquer dispositivo.
+
+6. Interface Intuitiva
+
+Como usuário,
+Quero navegar facilmente pelo sistema,
+Para realizar cadastros, agendamentos e feedbacks sem dificuldade.
+
+-------------------------------------------------------------------------------------------------
+
+Critérios de Aceitação – MVP AgendaFácil NAF Mobile
+
+1. Agendamento de Atendimento
+
+O usuário deve conseguir visualizar uma lista de serviços disponíveis.
+
+O usuário deve selecionar uma data e horário disponíveis.
+
+O sistema deve confirmar o agendamento com uma mensagem de sucesso.
+
+Não deve ser possível agendar em horários já ocupados.
+
+2. Gestão de Disponibilidade
+
+O sistema deve informar os dias e horários disponíveis.
+
+O sistema deve impedir conflitos de agendamento em horários já ocupados.
+
+Os usuários devem visualizar apenas horários disponíveis.
+
+3. Feedback e Avaliação
+
+O usuário deve poder avaliar o atendimento com uma nota (ex.: 1 a 5 estrelas).
+
+O usuário deve poder escrever um comentário opcional.
+
+O sistema deve registrar o feedback associado ao agendamento do usuário.
+
+O feedback deve ser visível apenas para o administrador ou equipe responsável.
+
+4. Segurança de Dados
+
+O sistema deve exigir autenticação para acessar informações pessoais.
+
+Os dados sensíveis devem ser armazenados de forma criptografada.
+
+O sistema deve estar em conformidade com a LGPD.
+
+O usuário deve poder solicitar a exclusão de seus dados.
+
+5. Desempenho Rápido
+
+O carregamento das páginas deve ocorrer em até 3 segundos em conexões comuns (4G/Wi-Fi).
+
+O sistema deve ser totalmente responsivo em dispositivos mobile e desktop.
+
+O usuário deve conseguir navegar entre páginas sem lentidão perceptível.
+
+6. Interface Intuitiva
+
+O menu de navegação deve estar sempre visível ou acessível.
+
+Todas as ações principais (agendar, cancelar, avaliar) devem estar a até 2 cliques de distância.
+
+Ícones e textos devem ser claros e autoexplicativos.
+
+O sistema deve exibir mensagens de erro amigáveis em caso de falha.
