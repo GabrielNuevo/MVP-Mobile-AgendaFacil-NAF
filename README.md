@@ -61,20 +61,30 @@ O projeto está organizado da seguinte forma:
 
 Siga os passos abaixo para rodar o projeto localmente:
 
-1. **Primeiro é necessário rodar o back-end**
+**Primeiro é necessário rodar o back-end**
 
-### Nota:
+1. **Clone ou faça o download do nosso repositório**:
+   ```bash
+   git clone https://github.com/felipetech4/MVP-BackEnd
+   ```
+2. **Acesse a pasta do projeto (MVP-BackEnd)**
+3. **Dentro da pasta, abra o terminal (Git Bash) e instale as dependências**:
+   ```bash
+   npm install
+   ```
+4. **Inicie o servidor**:
+   - Ainda na pasta do projeto, execute o arquivo `SobeSite.bat` clicando duas vezes sobre ele.
+   - Mantenha a janela do terminal aberta para manter o programa rodando.
+**Para encerrar a aplicação**:
+   - Basta fechar a janela do terminal.
 
-As instruções para execução do back-end encontram-se no README do repositório correspondente. O repositório está disponível em:
-
-[**MVP-BackEnd**](https://github.com/felipetech4/MVP-BackEnd)
-
-2. **Clone ou faça o download do nosso repositório mobile**:
+5. **Clone ou faça o download do nosso repositório mobile**:
    ```bash
    git clone https://github.com/GabrielNuevo/MVP-Mobile-AgendaFacil-NAF
    ```
-3. **Acesse a pasta do projeto**
-4. **Abrindo o site**:
+6. **Acesse a pasta do projeto**
+7. **Abrindo o site**:
    - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
+**Explore a nossa aplicação!**
 ---
