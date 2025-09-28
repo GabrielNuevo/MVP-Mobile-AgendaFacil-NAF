@@ -81,7 +81,7 @@ Siga os passos abaixo para rodar o projeto localmente:
    git clone https://github.com/GabrielNuevo/MVP-Mobile-AgendaFacil-NAF
    ```
 6. **Acesse a pasta do projeto**
-7. **Abrindo o site**:
+7. **Abra o site**:
    - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
 8. **Para encerrar a integração com o back-end**:
