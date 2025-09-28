@@ -1,0 +1,33 @@
+Funcionalidades Essenciais (presentes no MVP):
+
+1. Cadastrar novo usuário.
+
+2. Logar no sistema.
+
+3. Realizar um agendamento.
+
+4. Enviar um Feedback.
+
+5. Adaptação dinâmica da interface para diferentes resoluções de tela.
+
+
+Importantes (próximas versões):
+
+
+1. Integração com um banco de dados para armazenamento criptografado e seguro dos dados.
+
+2. Iniciar uma sessão de usuário com token ao logar.
+
+3. Tela para consultar os agendamentos realizados.
+
+4. Opção de excluir a conta e todas as informações pessoais, para adequação à LGTP.
+
+Desejáveis (futuras melhorias):
+
+1. Notificação de lembrete na véspera do dia do agendamento
+
+2. Confirmação por email ao realizar um agendamento
+
+3. Login para administradores, voltado a análise de feedbacks e administração de horários disponíveis
+
+4. Ter uma versão 100% web-app, que não dependa das lojas de aplicativo (Play Store/Apple Store)
