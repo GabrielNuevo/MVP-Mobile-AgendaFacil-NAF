@@ -84,7 +84,7 @@ Siga os passos abaixo para rodar o projeto localmente:
 7. **Abrindo o site**:
    - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
-8. **Para encerrar a integração com o Back-End**:
+8. **Para encerrar a integração com o back-end**:
    - Basta fechar a janela do terminal.
 
 9. **Explore a nossa aplicação!**
