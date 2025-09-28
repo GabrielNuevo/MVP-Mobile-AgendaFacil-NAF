@@ -16,29 +16,20 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('http://localhost:3000/api/agendamentos/disponiveis')
             .then(resposta => resposta.json())
             .then(horariosDisponiveis => {
-                horariosGlobais = horariosDisponiveis; // salvo para usar depois
+                horariosGlobais = horariosDisponiveis;
 
-                // limpar select de datas e adicionar placeholder
                 campoData.innerHTML = '<option value="">Selecione uma data</option>';
-
                 const datasAdicionadas = new Set();
 
                 horariosDisponiveis.forEach(item => {
-                    // item.dia pode ser número (28) ou string ("2025-09-28")
-                    let dataObj = isNaN(item.dia)
-                        ? new Date(item.dia)
-                        : new Date(new Date().getFullYear(), new Date().getMonth(), item.dia);
+                    const dataFormatada = formatarData(new Date(item.dia));
 
-                    if (isDataDentroDosProximos15Dias(dataObj)) {
-                        const dataFormatada = formatarData(dataObj);
-
-                        if (!datasAdicionadas.has(dataFormatada)) {
-                            const opcao = document.createElement('option');
-                            opcao.value = dataObj.toISOString().split("T")[0]; // yyyy-mm-dd
-                            opcao.textContent = dataFormatada;
-                            campoData.appendChild(opcao);
-                            datasAdicionadas.add(dataFormatada);
-                        }
+                    if (!datasAdicionadas.has(item.dia)) {
+                        const opcao = document.createElement('option');
+                        opcao.value = item.dia;
+                        opcao.textContent = dataFormatada;
+                        campoData.appendChild(opcao);
+                        datasAdicionadas.add(item.dia);
                     }
                 });
             })
@@ -47,13 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             });
     }
 
-    // Verificar se a data está dentro dos próximos 15 dias
-    function isDataDentroDosProximos15Dias(dataObj) {
-        const hoje = new Date();
-        const dataLimite = new Date();
-        dataLimite.setDate(hoje.getDate() + 15);
-        return dataObj >= hoje && dataObj <= dataLimite;
-    }
+
 
     // Carregar os horários de acordo com a data selecionada
     function carregarHorariosDisponiveis() {
@@ -62,13 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         if (!dataSelecionada) return;
 
-        const horariosFiltrados = horariosGlobais.filter(horario => {
-            const dataAPI = isNaN(horario.dia)
-                ? new Date(horario.dia).toISOString().split("T")[0]
-                : new Date(new Date().getFullYear(), new Date().getMonth(), horario.dia).toISOString().split("T")[0];
-
-            return dataAPI === dataSelecionada;
-        });
+        const horariosFiltrados = horariosGlobais.filter(horario => horario.dia === dataSelecionada);
 
         horariosFiltrados.forEach(horario => {
             const opcao = document.createElement('option');
