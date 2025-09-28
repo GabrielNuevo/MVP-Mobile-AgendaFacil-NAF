@@ -3,63 +3,51 @@ document.addEventListener('DOMContentLoaded', function () {
     const campoData = document.getElementById('dia');
     const campoHorario = document.getElementById('horario');
 
-    // Função para formatar a data para o formato DD/MM/AAAA
+    let horariosGlobais = []; // guardo os horários aqui
+
+    // Função para formatar a data (DD/MM/AAAA)
     function formatarData(data) {
         const opcoes = { day: '2-digit', month: '2-digit', year: 'numeric' };
         return new Date(data).toLocaleDateString('pt-BR', opcoes);
     }
 
-    // Função para carregar as datas e horários disponíveis
+    // Carregar as datas e horários disponíveis
     function carregarDatasEHorariosDisponiveis() {
         fetch('http://localhost:3000/api/agendamentos/disponiveis')
             .then(resposta => resposta.json())
             .then(horariosDisponiveis => {
-                const datasDisponiveis = horariosDisponiveis
-                    .map(horario => horario.dia)
-                    .filter(dia => isDataDentroDosProximos15Dias(dia));
+                horariosGlobais = horariosDisponiveis;
 
-                // Garantir que as datas não se repitam
+                campoData.innerHTML = '<option value="">Selecione uma data</option>';
                 const datasAdicionadas = new Set();
 
-                // Adiciona as opções de data no formato DD/MM/AAAA
-                datasDisponiveis.forEach(dia => {
-                    const dataFormatada = formatarData(new Date(new Date().getFullYear(), new Date().getMonth(), dia));
+                horariosDisponiveis.forEach(item => {
+                    const dataFormatada = formatarData(new Date(item.dia));
 
-                    // Se a data já foi adicionada, ignore
-                    if (!datasAdicionadas.has(dataFormatada)) {
+                    if (!datasAdicionadas.has(item.dia)) {
                         const opcao = document.createElement('option');
-                        opcao.value = dia;
+                        opcao.value = item.dia;
                         opcao.textContent = dataFormatada;
                         campoData.appendChild(opcao);
-                        datasAdicionadas.add(dataFormatada); // Adiciona a data ao Set
+                        datasAdicionadas.add(item.dia);
                     }
                 });
-
-                if (horariosDisponiveis.length > 0) {
-                    carregarHorariosDisponiveis(horariosDisponiveis);
-                }
             })
             .catch(erro => {
                 alert('Erro ao carregar horários disponíveis: ' + erro.message);
             });
     }
 
-    // Função para verificar se a data está dentro dos próximos 15 dias
-    function isDataDentroDosProximos15Dias(dia) {
-        const hoje = new Date();
-        const dataLimite = new Date();
-        dataLimite.setDate(hoje.getDate() + 15); // 15 dias a partir de hoje
 
-        const dataSelecionada = new Date(new Date().getFullYear(), new Date().getMonth(), dia);
 
-        return dataSelecionada >= hoje && dataSelecionada <= dataLimite;
-    }
-
-    function carregarHorariosDisponiveis(horariosDisponiveis) {
+    // Carregar os horários de acordo com a data selecionada
+    function carregarHorariosDisponiveis() {
         const dataSelecionada = campoData.value;
+        campoHorario.innerHTML = '<option value="">Selecione um horário</option>';
 
-        const horariosFiltrados = horariosDisponiveis.filter(horario => horario.dia === parseInt(dataSelecionada));
-        campoHorario.innerHTML = ''; // Limpa as opções anteriores
+        if (!dataSelecionada) return;
+
+        const horariosFiltrados = horariosGlobais.filter(horario => horario.dia === dataSelecionada);
 
         horariosFiltrados.forEach(horario => {
             const opcao = document.createElement('option');
@@ -71,18 +59,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     carregarDatasEHorariosDisponiveis();
 
-    campoData.addEventListener('change', function () {
-        carregarHorariosDisponiveis();
-    });
+    campoData.addEventListener('change', carregarHorariosDisponiveis);
 
     formularioAgendamento.addEventListener('submit', function (evento) {
         evento.preventDefault();
-    
+
         const nome = document.getElementById('nome').value;
         const email = document.getElementById('email').value;
         const dia = campoData.value;
         const horario = campoHorario.value;
-    
+
         fetch('http://localhost:3000/api/agendamentos/criar', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -92,15 +78,14 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!resposta.ok) {
                 return resposta.json().then(dados => { throw new Error(dados.message); });
             }
-            return resposta.json(); // Converte a resposta para JSON
+            return resposta.json();
         })
         .then(dados => {
-            // Exibe a mensagem de sucesso
-            alert(dados.message); // Exibe a mensagem de sucesso no alert
-            window.location.href = 'feedback.html'; // Redireciona para a página de feedback
+            alert(dados.message);
+            window.location.href = 'feedback.html';
         })
         .catch(erro => {
-            alert(`Atenção: ${erro.message}`); // Exibe o erro, caso haja
+            alert(`Atenção: ${erro.message}`);
         });
     });
 });
