@@ -1,0 +1,55 @@
+Requisitos Funcionais:
+
+	1. Agendamento de Atendimento: Possibilitar que os usuários agendem atendimentos rapidamente e de forma autônoma.
+	2. Gestão de Disponibilidade: Rastrear e gerenciar horários disponíveis automaticamente.
+	3. Cadastro e Login: Permitir ao usuário cadastrar uma nova conta e usá-la para fazer login no sistema.
+	4. Feedback e Avaliação: Receber feedback dos usuários sobre os serviços prestados.
+
+Requisitos Não-Funcionais:
+
+	1. Desempenho: As páginas devem ser de carregamento rápido.
+	2. Responsividade: o aplicativo deve ser responsivo e funcional em aparelhos com especificações diversas.
+	3. Usabilidade: navegação simples, intuitiva, agradável e acessível.
+	4. Segurança de Dados: Garantir conformidade com regulamentações de privacidade.
+	
+----------------------------------------------------------------------------------------------------
+
+Histórias de Usuário – MVP AgendaFácil NAF Mobile
+
+1. Agendamento de Atendimento:
+
+Como usuário,
+Quero agendar um serviço de forma simples e rápida,
+Para garantir meu atendimento no horário desejado.
+
+2. Gestão de Disponibilidade
+
+Como administrador,
+Quero registrar e gerenciar horários livres na agenda,
+Para que os usuários possam escolher apenas horários disponíveis.
+
+3. Feedback e Avaliação
+
+Como usuário,
+Quero avaliar e deixar meu feedback sobre o atendimento recebido,
+Para contribuir para a melhoria contínua do serviço.
+
+4. Segurança de Dados
+
+Como usuário,
+Quero que meus dados pessoais sejam armazenados e tratados com segurança, em conformidade com a LGPD,
+Para ter confiança ao utilizar a plataforma.
+
+5. Desempenho Rápido
+
+Como usuário,
+Quero que as páginas carreguem rapidamente e sejam responsivas,
+Para não perder tempo e conseguir acessar o sistema de qualquer dispositivo.
+
+6. Interface Intuitiva
+
+Como usuário,
+Quero navegar facilmente pelo sistema,
+Para realizar cadastros, agendamentos e feedbacks sem dificuldade.
+
+----------------------------------------------------------------------------------------------------
