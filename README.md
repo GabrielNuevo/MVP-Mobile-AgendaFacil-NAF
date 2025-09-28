@@ -65,7 +65,9 @@ Siga os passos abaixo para rodar o projeto localmente:
 
 ### Nota:
 
-As instruções para execução do back-end encontram-se no README do repositório correspondente.
+As instruções para execução do back-end encontram-se no README do repositório correspondente. O repositório está disponível em:
+
+[**MVP-BackEnd**](https://github.com/felipetech4/MVP-BackEnd)
 
 2. **Clone ou faça o download do nosso repositório mobile**:
    ```bash
