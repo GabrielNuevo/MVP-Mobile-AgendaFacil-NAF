@@ -75,8 +75,6 @@ Siga os passos abaixo para rodar o projeto localmente:
 4. **Inicie o servidor**:
    - Ainda na pasta do projeto, execute o arquivo `SobeSite.bat` clicando duas vezes sobre ele.
    - Mantenha a janela do terminal aberta para manter o programa rodando.
-**Para encerrar a aplicação**:
-   - Basta fechar a janela do terminal.
 
 5. **Clone ou faça o download do nosso repositório mobile**:
    ```bash
@@ -86,5 +84,8 @@ Siga os passos abaixo para rodar o projeto localmente:
 7. **Abrindo o site**:
    - Execute o arquivo `AbreSite.bat` clicando duas vezes sobre ele.
 
-**Explore a nossa aplicação!**
+8. **Para encerrar a integração com o Back-End**:
+   - Basta fechar a janela do terminal.
+
+9. **Explore a nossa aplicação!**
 ---
